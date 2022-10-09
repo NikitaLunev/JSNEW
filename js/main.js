@@ -16,6 +16,15 @@ console.log("Sample JavaScript #1 HW #13");
 
 // имя переменной myObj, значения: first: 'First Name', last: 'Last Name'
 
+myNum = 10;
+myStr = "строка";
+myBool = true;
+myArr = [1, 2, 3, 4, 5];
+myObj = {
+  first: "First Name",
+  last: "Last Name",
+};
+
 /*
  * #2
  *
@@ -24,8 +33,7 @@ console.log("Sample JavaScript #1 HW #13");
  * Результат сохраните в переменную decimal2.
  */
 
-// decimal2
-
+var decimal2 = myNum.toFixed(2);
 /*
  * #3
  *
@@ -34,7 +42,13 @@ console.log("Sample JavaScript #1 HW #13");
  * Поэкспериментируйте с результатами, выводя их в консоль.
  */
 
-// i
+i = 1;
+console.log(i);
+console.log(i++);
+console.log(++i);
+console.log(i);
+console.log(i--);
+console.log(--i);
 
 /*
  * #4
@@ -45,9 +59,22 @@ console.log("Sample JavaScript #1 HW #13");
  * В вычислениях можно использовать объявленную ранее переменную myNum и/или числа.
  */
 
-// myTest
+var myTest = 20;
 
-// +=
+myTest += myNum;
+console.log(myTest);
+
+myTest -= myNum;
+console.log(myTest);
+
+myTest *= myNum;
+console.log(myTest);
+
+myTest /= myNum;
+console.log(myTest);
+
+myTest %= myNum;
+console.log(myTest);
 
 // –=
 
@@ -63,13 +90,25 @@ console.log("Sample JavaScript #1 HW #13");
  * Используя свойства и методы объекта Math, присвойте переменным и отобразите в консоли
  */
 
+var myPi = Math.PI;
+console.log(myPi);
+
 // константа Pi → myPi
+
+var myRound = Math.round(89.279);
+console.log(myRound);
 
 // округленное значение числа 89.279 → myRound
 
 // случайное число между 0..10 → myRandom
 
+var myRandom = Math.random() * 10;
+console.log(myRandom);
+
 // 3 в 5 степени → myPow
+
+var myPow = Math.pow(3, 5);
+console.log(myPow);
 
 /*
  * #6
@@ -78,9 +117,9 @@ console.log("Sample JavaScript #1 HW #13");
  * Присвойте ключу str строку текста "Мама мыла раму, рама мыла маму", ключу length установите длину этой строки.
  */
 
-// Мама мыла раму, рама мыла маму
-
-// strObj
+var strObj = { str: "Мама мыла раму, рама мыла маму" };
+strObj.length = strObj.str.length;
+console.log(strObj);
 
 /*
  * #7
@@ -89,7 +128,8 @@ console.log("Sample JavaScript #1 HW #13");
  * результат сохраните в переменную isRamaPos и выведите ее в консоль.
  */
 
-// isRamaPos
+var isRamaPos = strObj.str.indexOf("рама");
+console.log(isRamaPos);
 
 /*
  * #8
@@ -100,10 +140,17 @@ console.log("Sample JavaScript #1 HW #13");
  *       Результат: 'Мама моет раму, Рама держит маму'
  */
 
-// strReplace
+var strReplace = strObj.str.replace("мыла", "моет");
+strReplace = strReplace.replace("рама", "Рама");
+strReplace = strReplace.replace("мыла", "держит");
+
+console.log(strReplace);
 
 /*
  * #9
  *
  * Преобразуйте любую строку в верхний, затем в нижний регистры, результат отобразите в консоли.
  */
+
+console.log(strReplace.toUpperCase());
+console.log(strReplace.toLowerCase());
